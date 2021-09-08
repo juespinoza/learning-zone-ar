@@ -36,5 +36,13 @@ module LearningZoneAr
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Fix NoMethodError (undefined method `flash=' for
+    # #<ActionDispatch::Request POST "http://0.0.0.0:3000/api/users" for 127.0.0.1>)
+    config.middleware.use ActionDispatch::Flash
+
+    # Fix NoMethodError (undefined method `underscore_params!' for
+    # #<Devise::RegistrationsController:0x00000000007120>)
+    config.middleware.use Rack::MethodOverride
   end
 end

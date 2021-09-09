@@ -1,0 +1,16 @@
+<h1>Bienvenido a Learning Zone Argentina, <%= @user.name %></h1>
+<p>
+  Has creado tu cuenta correctamente en nuestro sitio.
+</p>
+<p>
+  Para completar el registro tienes que confirmar este email. Para ello, sólo tienes que hacer click en el siguiente link:
+</p>
+<p>
+  <%= link_to 'Confirmación', confirm_users_url(:token => "#{@user.confirmation_token}") %>
+</p>
+<p>Gracias por utilizar Learning Zone Argentina, que tengas buen día!</p>
+
+<p>
+  Gracias,<br />
+  Equipo de Learning Zone Argentina
+</p>

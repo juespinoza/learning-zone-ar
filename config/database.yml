@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: learning_zone_ar_production
-  username: learning_zone_ar
-  password: <%= ENV['LEARNING_ZONE_AR_DATABASE_PASSWORD'] %>
+#  username: learning_zone_ar
+#  password: <%#= ENV['LEARNING_ZONE_AR_DATABASE_PASSWORD'] %>

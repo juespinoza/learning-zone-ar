@@ -43,6 +43,6 @@ module LearningZoneAr
 
     # Fix NoMethodError (undefined method `underscore_params!' for
     # #<Devise::RegistrationsController:0x00000000007120>)
-    config.middleware.use Rack::MethodOverride
+    # config.middleware.use Rack::MethodOverride
   end
 end
